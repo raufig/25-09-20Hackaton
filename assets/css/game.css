@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ranchers', cursive;
+    background:#2692C9;
+    
+}
+h2{
+    text-align: center;
+    margin: 50px;
+    width: 90%;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 50px auto;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+section{
+    width: 95%;
+ 
+    margin: auto;
+    display: flex;
+}
+main{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+aside{
+    width: 25%;
+    text-align: center;
+}
+aside>.tiempo{
+    background: #fff;
+    width: 200px;
+    margin: auto;
+}
+aside>.puntaje{
+    padding: 20px 0;
+}
+aside>.titulo-puntaje{
+color: #fff;
+font-size: 25px;
+margin: 10px 0;
+letter-spacing: 1px;
+}
+aside>.puntaje{
+    width: 200px;
+    margin: auto;
+    height: 345px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+aside>.puntaje>button{
+    display: block;
+    margin:20px auto;
+    border: none;
+    background: #EB1818;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px;
+    width: 150px;
+    letter-spacing: 1px;
+    transition: .4s all;
+}
+aside>.puntaje>button:focus{
+    outline: none;
+}
+aside>.puntaje>button:active{
+    transform: scale(.98);
+}
+main>.carta{
+   width: 450px;
+   margin: auto;
+   padding: 0;
+   position: relative;
+   height: 300px;
+   border-radius: 4px;
+   cursor: pointer;
+   overflow: hidden;
+   transition: .4s all;
+}
+main>.carta>img{
+    width: 100%;
+    border-radius: 4px;
+    filter: blur(10px);
+ }
+ #puntaje-span{
+     font-size: 20px;
+ }
+
+/* primera opcion */
+.simon{
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+}
+ .simon img{
+     width: 100%;  
+} 
+.simon button{
+    position: absolute;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-shadow: 0 1px 0 rgba(255,255,255,.1),
+    0 2px 0 rgba(255,255,255,.1),
+    0 3px 0 rgba(255,255,255,.1),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 8px rgba(0,0,0,.25),
+    0 5px 8px rgba(0,0,0,.2),
+    0 5px 8px rgba(0,0,0,.15);
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    transition: .4s all;
+    background: transparent;
+    border: none;
+}
+button:focus{outline: none;}
+ .c1{
+  left: 30px;
+  top: 45px;
+  position: absolute;
+  transform:rotate(-45deg)
+}
+.c1:hover{color: rgb(202, 7, 7);}
+.c2{
+    left: 155px;
+    top: 50px;
+    transform:rotate(45deg)
+}
+.c2:hover{color:#2692C9;}
+.c3{
+left: 40px;
+  top: 170px;
+  position: absolute;
+  transform:rotate(45deg)
+}
+.c3:hover{color:rgb(42, 230, 42);}
+.c4{
+    left: 150px;
+    top: 170px;
+    position: absolute;
+    transform:rotate(-45deg)
+}
+.c4:hover{color:rgb(245, 245, 7);}
+
+.tiempo{
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+@media(max-width:1160px){
+    main{width: 100%;}
+    aside{width: 100%;margin: 30px 0;}
+    section{display: block;}
+    aside>.puntaje{height: 180px;}
+    aside>.puntaje>button{font-size: 14px;}
+}
+
+@media(max-width:740px){
+    main>.carta{width: 350px; height: 250px;}
+}

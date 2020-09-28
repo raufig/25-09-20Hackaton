@@ -1,0 +1,100 @@
+:root {
+    --colorFondo: #2692C9;
+    --colorLetra: #fff;
+    --sombra: rgb(28, 27, 53);
+    --sombraParrafo: rgb(71, 69, 116);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: var(--colorFondo);
+}
+
+
+a {
+    color: var(--colorLetra);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Ranchers',
+        cursive;
+    text-shadow: 2px 2px 5px var(--sombra);
+
+}
+
+div.relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    height: 70px;
+    overflow-x: hidden;
+
+}
+
+div.absolute {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 20px;
+    transform: translateX(150%);
+    transition: all 2s ease;
+    text-align: center;
+    bottom: 15px;
+
+}
+
+div.relative:hover div.absolute {
+    transform: translateX(0%);
+    transition: all 2s ease;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px auto;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    text-shadow: 2px 2px 5px var(--sombra);
+}
+
+h1 {
+    margin-bottom: 50px;
+    color: var(--colorLetra);
+    font-family: 'Ranchers',
+        cursive;
+    font-weight: 100;
+    text-shadow: 2px 2px 5px var(--sombra);
+}
+
+p {
+    color: var(--colorLetra);
+    font-family: 'Ranchers',
+        cursive;
+    text-shadow: 2px 2px 5px var(--sombraParrafo);
+
+}
+.puntaje{
+    color: rgb(141, 10, 10);
+    letter-spacing: 1px;
+    margin-left: 10px;
+}

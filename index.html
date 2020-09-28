@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        
+</head>
+<body>
+
+  
+   <div class="cont-ingresar">
+    <button id="btn-ingresar">Ingresar</button>
+   </div>
+ <h2>REGISTRATE PARA JUGAR</h2>
+
+     <main id="main" >
+
+    
+        <form action="#" id="formulario">
+            
+            <p id="error">Todos los campos son obligatorios <i class="fas fa-exclamation-triangle"></i></p>
+            <p id="errorContra"><i class="fas fa-exclamation-circle"></i>Las contraseñas NO coinciden <i class="fas fa-exclamation-circle"></i></p>
+         
+
+             <div class="form-group">
+                <label id="nombre">Nombre</label>
+                <input type="text" id="inombre" onkeyup="subir('nombre')" onClick="subir('nombre')" onBlur="bajar('nombre','inombre','iconombre')">
+                <i class="fas fa-user" id="iconombre"></i>
+            </div> 
+
+            <div class="form-group">
+                <label id="apellido">Usuario</label>
+                <input type="text" id="iapellido" onkeyup="subir('apellido')"  onClick="subir('apellido')" onBlur="bajar('apellido','iapellido','icoapellido')">
+                <i class="fas fa-user" id="icoapellido"></i>
+            </div>
+          
+            <div class="form-group">
+                <label id="email">Email</label>
+                <input type="email" id="iemail" onkeyup="subir('email')"  onClick="subir('email')" onBlur="bajar('email','iemail','icoemail')">
+                <i class="fas fa-envelope" id="icoemail"></i>  
+            </div>
+            <div class="form-group">
+                <label id="contraseña">Contraseña</label>
+                <input type="password" id="icontraseña" onkeyup="subir('contraseña')" onClick="subir('contraseña')" onBlur="bajar('contraseña','icontraseña','iconocontraseña')">
+                <i class="fas fa-key" id="iconocontraseña"></i>
+            </div>
+
+            <div class="form-group">
+                <label id="contraseña2">Repetir contraseña</label>
+                <input type="password" id="icontraseña2" onkeyup="subir('contraseña2')"  onClick="subir('contraseña2')" onBlur="bajar('contraseña2','icontraseña2','iconosubir')">
+                <i class="fas fa-unlock" id="iconosubir"></i>
+            </div>
+
+            <div class="form-group">
+                <select name="select" id="select-sexo" onChange="selectg('select-sexo','int','hom','muj')">
+                    <option value="" >Selecciona tu sexo</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+                <i class="fas fa-question" id="int" ></i>
+                <i class="fas fa-male" id="hom" style="font-size: 25px;"></i> 
+                <i class="fas fa-female" id="muj" style="font-size: 25px;"></i> 
+            </div>
+
+
+
+            <button>Registrar</button>
+
+            <div class="sk-chase" id="spinner">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+              </div>
+
+              <p id="exito">Registro exitoso</p>
+
+            <div class="opciones-alternas">
+                <small>También registrate por:</small>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fas fa-envelope"></i> 
+            </div>
+        
+        </form>
+
+
+       
+     </main>
+     <form action="#" class="login-ingresar" id="login-ingresar">
+
+        <div class="icono-formulario-ingreso d-flex align-items-center text-center"><i class="fas fa-user"></i></div>
+        <p>Ingresar</p>
+        <p class="error-ingreso" id="faltan">Todos los campos son obligatorios <i class="fas fa-exclamation-triangle ml-1"></i></p>
+        <p class="error-ingreso" id="contra-mala">Datos incorrectos <i class="fas fa-skull-crossbones ml-1 "></i></p>
+       
+        <div class="form-froup d-flex mb-2">
+            <i class="fas fa-user mr-2 pt-1"></i>
+            <input type="text" placeholder="Usuario" id="usuario-ingreso">
+        </div>
+
+        <div class="form-froup d-flex mb-2">
+            <i class="fas fa-lock  mr-2 pt-1"></i>
+            <input type="password" placeholder="Contraseña" id="contraseña-ingreso">
+        </div>
+        <button>Entrar</button>
+        <div class="form-froup d-flex justify-content-between mt-3 ">
+            <div class="cont-recordar d-flex">
+                <input type="checkbox">
+                <small class="recordarme">Recordarme</small>
+              
+            </div>
+            <small class="recordarme w-50">¿Olvidaste la contraseña?</small>
+        </div>
+    </form>
+    
+    <div class="sombra">
+        <img src="assets/img/bg.png" alt="">
+    </div>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="assets/js/index.js"></script>
+  
+</body>
+</html>
